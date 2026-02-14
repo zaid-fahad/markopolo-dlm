@@ -1,0 +1,13 @@
+services:
+  node1:
+    build: .
+    command: python server.py 5001
+    ports: ["5001:5001"]
+  node2:
+    build: .
+    command: python server.py 5002
+    ports: ["5002:5002"]
+  node3:
+    build: .
+    command: python server.py 5003
+    ports: ["5003:5003"]
