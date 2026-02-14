@@ -4,7 +4,7 @@ A lightweight, quorum-based distributed lock manager built from scratch to coord
 
 ---
 
-## 🏗 Architecture Diagram
+## Architecture Diagram
 
 ```mermaid
         [ Client Application ]
@@ -20,7 +20,7 @@ A lightweight, quorum-based distributed lock manager built from scratch to coord
 
 ---
 
-## 🛠 How It Works: Quorum-Lease Algorithm
+##  How It Works: Quorum-Lease Algorithm
 
 * **Quorum Voting**: The client broadcasts an `acquire` request to all available nodes. It must receive a **"GRANTED"** response from a majority () to successfully hold the lock.
 * **Monotonic TTL**: Servers use `time.monotonic()` to track lock expiry. This ensures the lease duration is measured by hardware ticks rather than "Time of Day," preventing issues where system clocks are adjusted manually or via NTP.
